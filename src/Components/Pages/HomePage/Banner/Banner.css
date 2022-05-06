@@ -1,0 +1,21 @@
+.banner-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.banner-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-image img{
+    width: 80%;
+    height: 40vh;
+    border-radius: 10px;
+}
+.banner-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
