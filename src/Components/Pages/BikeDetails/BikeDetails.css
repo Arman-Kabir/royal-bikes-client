@@ -1,0 +1,22 @@
+.bike-details-container {
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+}
+.bike-details-image img{
+    width: 600px;
+    height: 400px;
+}
+
+.bike-details-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bike-details-details{
+    margin: 5px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+}

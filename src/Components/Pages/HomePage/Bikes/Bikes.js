@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Bike from '../../../Shared/Bike/Bike';
+import Bike from '../Bike/Bike';
+
 import './Bikes.css';
 
 const Bikes = () => {
@@ -17,10 +18,10 @@ const Bikes = () => {
 
             <div className='bikes-container container'>
                 {
-                    bikes.map(bike=> <Bike
-                    key = {bike._id}
-                    bike = {bike}
-                    ></Bike> )
+                    bikes.map(bike => <Bike
+                        key={bike._id}
+                        bike={bike}
+                    ></Bike>)
                 }
             </div>
         </div>
