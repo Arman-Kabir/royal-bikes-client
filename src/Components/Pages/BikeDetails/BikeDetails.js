@@ -36,6 +36,32 @@ const BikeDetails = () => {
                 alert('quantity updated successfully');
             })
     }
+    // Update restock
+    const handleReStock = event => {
+        event.preventDefault();
+        const newQuantity = parseInt(event.target.restock.value) + parseInt(quantity);
+        console.log(newQuantity);
+        const updatedQuantity = { newQuantity };
+        // console.log('restock item id', id);
+
+        // send data to server
+        const url = `http://localhost:5000/inventory/${id}`;
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('success', data);
+                setBike({ _id, name, image, price, newQuantity, supplier, description });
+                alert('quantity updated successfully');
+                event.target.reset();
+            })
+
+    }
 
 
     return (
@@ -56,9 +82,17 @@ const BikeDetails = () => {
                 <p className='text-center fw-bold text-danger mt-2'>Bikes Description</p>
                 <p className='m-0'>{description}</p>
 
-                <div className='d-flex justify-content-center mt-2'>
+                <div className='d-flex justify-content-center m-3'>
                     <button className='border-0 bg-danger text-white fw-bold p-1 rounded' onClick={() => handleDelivered(_id)}>Delivered</button>
                 </div>
+
+                <form action="" className='d-flex justify-content-center' onSubmit={handleReStock}>
+
+                    <span>Restock the Items</span>
+                    <input type="number" name="restock" id="" />
+                    {/* <button type="submit">ReStock</button> */}
+                    <input type="submit" value="ReStock" />
+                </form>
             </div>
         </div>
     );
