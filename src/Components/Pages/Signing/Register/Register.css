@@ -1,0 +1,14 @@
+
+
+.register-btn{
+    background-color: black;
+    color:green;
+    padding: 6px 10px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+ 
+ }
+ .register-btn:hover{
+     color:crimson;
+ }

@@ -45,11 +45,7 @@ const ManageInventory = () => {
                         handleInventoryItemDelete={handleInventoryItemDelete}
                     ></Inventory>)
                 }
-            </div>
-
-            <div className='link-container text-center mt-5 mb-5'>
-                <Link to='/manageinventories'>Manage Inventories</Link>
-            </div>
+            </div>         
         </div>
     );
 };

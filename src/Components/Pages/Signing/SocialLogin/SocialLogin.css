@@ -1,0 +1,25 @@
+.divider{
+    display: flex;
+    align-items: center;
+}
+.divider p{
+    margin: 10px ;
+    font-weight: bold;
+    color: aqua;
+}
+.left-divider,.right-divider{
+    height: 1px;
+    background-color: gray;
+    width: 45%;
+}
+.google-signin{
+    background-color: black;
+    color:green;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.google-signin img{
+    width: 30px;
+    height: 30px;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import './BikeDetails.css';
 
 const BikeDetails = () => {
@@ -93,6 +93,10 @@ const BikeDetails = () => {
                     {/* <button type="submit">ReStock</button> */}
                     <input type="submit" value="ReStock" />
                 </form>
+            </div>
+            <div className='link-container text-center'>
+                <Link to='/manageinventories' className='text-decoration-none fw-bold fs-4 text-danger'>Manage Inventories</Link>
+
             </div>
         </div>
     );

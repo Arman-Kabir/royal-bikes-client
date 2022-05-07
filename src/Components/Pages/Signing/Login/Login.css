@@ -1,0 +1,42 @@
+.login-container {
+    width: 400px;
+    border: 2px solid grey;
+    margin: 100px auto;
+    padding: 20px;
+}
+
+.form-group label {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-group input:not([name="checkbox"]) {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.login-btn {
+    background-color: black;
+    color: green;
+    padding: 6px 10px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.login-btn:hover {
+    color: crimson;
+}
+
+.submit-btn {
+    display: flex;
+    justify-content: center;
+
+}
+
+.swap-register {
+    cursor: pointer;
+}
