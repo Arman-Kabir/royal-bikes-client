@@ -1,9 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddInventoryItem from './Components/Pages/AddInventoryItem/AddInventoryItem';
 import BikeDetails from './Components/Pages/BikeDetails/BikeDetails';
 import Home from './Components/Pages/HomePage/Home/Home';
 
-import ManageInventory from './Components/Pages/Manage/ManageInventory/ManageInventory';
+import ManageInventories from './Components/Pages/Manage/ManageInventories/ManageInventories';
 import Login from './Components/Pages/Signing/Login/Login';
 import Register from './Components/Pages/Signing/Register/Register';
 import RequireAuth from './Components/Pages/Signing/RequireAuth/RequireAuth';
@@ -16,7 +17,9 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/manageinventory' element={<ManageInventory></ManageInventory>}></Route>
+        <Route path='/manage-inventories' element={<ManageInventories></ManageInventories>}></Route>
+        <Route path='/add-inventory-item' element={<AddInventoryItem></AddInventoryItem>}></Route>
+
         <Route path='/inventory/:id' element={
           <RequireAuth>
             <BikeDetails></BikeDetails>

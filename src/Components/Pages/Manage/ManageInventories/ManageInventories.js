@@ -1,11 +1,17 @@
 import React from 'react';
-import './ManageInventory.css';
-import { Link } from 'react-router-dom';
+import './ManageInventories.css';
+import { Link, useNavigate } from 'react-router-dom';
 import useBikes from '../../../hooks/useBikes';
 import Inventory from '../Inventory/Inventory';
 
 const ManageInventory = () => {
     const [bikes, setBikes] = useBikes([]);
+    const navigate = useNavigate();
+
+    const handleAddNewItem = () => {
+        console.log('add new item');
+        navigate('/add-inventory-item');
+    }
 
     const handleInventoryItemDelete = id => {
         console.log('inventory item delete id', id);
@@ -38,6 +44,8 @@ const ManageInventory = () => {
     return (
         <div>
             <h2 className='text-center mt-3'>All Royal Bikes: {bikes.length}</h2>
+            <p className='text-center'><button className='border-0 bg-danger text-white rounded fw-bold'
+                onClick={handleAddNewItem}>Add New Item</button></p>
 
             <div className='inventory-container container mt-5'>
                 {
@@ -45,7 +53,7 @@ const ManageInventory = () => {
                         handleInventoryItemDelete={handleInventoryItemDelete}
                     ></Inventory>)
                 }
-            </div>         
+            </div>
         </div>
     );
 };
