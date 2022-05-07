@@ -1,0 +1,19 @@
+.inventory-item-container{
+    display: grid;
+    grid-template-columns: .8fr 2fr .5fr .5fr;
+    /* grid-gap: 30px; */
+}
+.inventory-item-image img{
+    width: 200px;
+    height: 150px;
+    border-radius: 20px;
+}
+.inventory-item-details p{
+    margin: 0;
+    padding: 0;
+}
+.center-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
