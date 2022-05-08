@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useBikes from '../../../hooks/useBikes';
+import Loading from '../../../Shared/Loading/Loading';
 import Bike from '../Bike/Bike';
 
 import './Bikes.css';
@@ -8,6 +9,10 @@ import './Bikes.css';
 const Bikes = () => {
     const limitItem = 6;
     const [bikes, setBikes] = useBikes(limitItem);
+
+    if(bikes.length<1){
+        return <Loading></Loading>;
+    }
 
     return (
         <div className='bikes-collection my-5'>

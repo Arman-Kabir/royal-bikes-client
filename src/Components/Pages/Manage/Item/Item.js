@@ -8,7 +8,7 @@ const Item = ({ bike, handleItemDelete }) => {
     const navigate = useNavigate();
 
     const navigateToBikeDetails = () => {
-        // navigate(`/inventoryitem/${_id}`);
+        navigate(`/inventoryitem/${_id}`);
     }
 
 

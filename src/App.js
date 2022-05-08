@@ -13,6 +13,8 @@ import AddMyItem from './Components/Pages/AddMyItem/AddMyItem';
 import ManageMyItems from './Components/Pages/Manage/ManageMyItems/ManageMyItems';
 import Blogs from './Components/Pages/Blogs/Blogs';
 import Footer from './Components/Shared/Footer/Footer';
+import NotFound from './Components/Pages/NotFound/NotFound';
+import ItemDetails from './Components/Pages/ItemDetails/ItemDetails';
 
 
 function App() {
@@ -57,8 +59,16 @@ function App() {
           </RequireAuth>
         }></Route>
 
+        <Route path='/inventoryitem/:id' element={
+          <RequireAuth>
+            <ItemDetails></ItemDetails>
+          </RequireAuth>
+        }></Route>
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </div>

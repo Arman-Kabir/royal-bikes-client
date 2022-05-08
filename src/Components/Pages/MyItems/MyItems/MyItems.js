@@ -17,7 +17,11 @@ const MyItems = () => {
             if (email) {
                 const url = `http://localhost:5000/inventoryitem?email=${email}`;
                 console.log('url=', url);
-                fetch(url)
+                fetch(url,{
+                    headers:{
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
                     .then(res => res.json())
                     .then(data => setMyitems(data))
             }

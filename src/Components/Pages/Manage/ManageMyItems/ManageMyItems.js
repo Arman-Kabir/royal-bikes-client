@@ -4,16 +4,25 @@ import { Link, useNavigate } from 'react-router-dom';
 import useBikes from '../../../hooks/useBikes';
 import Inventory from '../Inventory/Inventory';
 import Item from '../Item/Item';
+import auth from '../../../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const ManageMyItems = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const email = user?.email;
+    console.log('email', email);
     // const [bikes, setBikes] = useBikes([]);
     const [bikes, setBikes] = useState([]);
     console.log(bikes);
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventoryitem`;
-        fetch(url)
+        const url = `http://localhost:5000/inventoryitem?email=${email}`;
+        fetch(url,{
+            headers:{
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
             .then(res => res.json())
             .then(data => setBikes(data))
     }, []);
@@ -61,8 +70,8 @@ const ManageMyItems = () => {
         <div>
             <h2 className='text-center mt-3'>All Royal Bikes: {bikes.length}</h2>
             <div className='add-item-buttons d-flex justify-content-center'>
-                <p className='text-center me-3'><button className='border-0 bg-danger text-white rounded fw-bold'
-                    onClick={handleAddInventoryNewItem}>Add Inventory New Item</button></p>
+                {/* <p className='text-center me-3'><button className='border-0 bg-danger text-white rounded fw-bold'
+                    onClick={handleAddInventoryNewItem}>Add Inventory New Item</button></p> */}
                 <p className='text-center'><button className='border-0 bg-danger text-white rounded fw-bold'
                     onClick={handleAddNewItem}>Add New Item</button></p>
             </div>
