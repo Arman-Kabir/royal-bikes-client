@@ -8,8 +8,8 @@ const Footer = () => {
             <div className='container footer-box'>
                 <div className='d-flex flex-column pt-5 justify-content-center align-items-center'>
                     <div>
-                        <h3 className='text-info'>Mister-bd-gym</h3>
-                        <p className='text-danger'>Best gym in the town</p>
+                        <h3 className='text-info'>Royal-Bikes</h3>
+                        <p className='text-danger'>Best bikes Collection</p>
                     </div>
                 </div>
                 <div className='pt-5 d-flex flex-column pt-5 justify-content-center align-items-center'>
@@ -17,9 +17,9 @@ const Footer = () => {
                         <h3 className='text-info ps-5'>Directories</h3>
                         <ul>
                             <li><Link className='link' to='/'>Home</Link></li>
-                            <li><Link className='link' to='/services'>Services</Link></li>
                             <li><Link className='link' to='/blogs'>Blogs</Link></li>
-                            <li><Link className='link' to='/about'>About</Link></li>
+                            <li><Link className='link' to=''>Manage Inventories</Link></li>
+                            <li><Link className='link' to=''>My Items</Link></li>
                         </ul>
                     </div>
                 </div>

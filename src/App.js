@@ -12,6 +12,7 @@ import MyItems from './Components/Pages/MyItems/MyItems/MyItems';
 import AddMyItem from './Components/Pages/AddMyItem/AddMyItem';
 import ManageMyItems from './Components/Pages/Manage/ManageMyItems/ManageMyItems';
 import Blogs from './Components/Pages/Blogs/Blogs';
+import Footer from './Components/Shared/Footer/Footer';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

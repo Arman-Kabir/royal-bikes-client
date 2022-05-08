@@ -1,0 +1,10 @@
+.conatct-container {
+    background-color: rgb(29, 78, 1);
+    border-radius: 30px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+
+}
