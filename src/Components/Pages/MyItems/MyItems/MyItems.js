@@ -17,7 +17,11 @@ const MyItems = () => {
             if (email) {
                 const url = `http://localhost:5000/inventoryitem?email=${email}`;
                 console.log('url=', url);
-                fetch(url)
+                fetch(url,{
+                    headers:{
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
                     .then(res => res.json())
                     .then(data => setMyitems(data))
             }
@@ -57,8 +61,8 @@ const MyItems = () => {
 
     return (
         <div>
-            <h2 className='text-center'>Hello, {user?.email}. You have <span className='fw-bold text-info'>{myitems.length}</span> Items</h2>
-            <div className='myitems-container container'>
+            <h2 className='text-center mt-5'>Hello,Mr. <span className='text-danger'>{user?.email}</span> ... You have <span className='fw-bold text-info'>{myitems.length}</span> Items</h2>
+            <div className='myitems-container container mt-5'>
                 {
                     myitems.map(item => <MyItem key={item._id} item={item}
                         handleItemDelete={handleItemDelete}></MyItem>)

@@ -10,6 +10,11 @@ import RequireAuth from './Components/Pages/Signing/RequireAuth/RequireAuth';
 import Header from './Components/Shared/Header/Header';
 import MyItems from './Components/Pages/MyItems/MyItems/MyItems';
 import AddMyItem from './Components/Pages/AddMyItem/AddMyItem';
+import ManageMyItems from './Components/Pages/Manage/ManageMyItems/ManageMyItems';
+import Blogs from './Components/Pages/Blogs/Blogs';
+import Footer from './Components/Shared/Footer/Footer';
+import NotFound from './Components/Pages/NotFound/NotFound';
+import ItemDetails from './Components/Pages/ItemDetails/ItemDetails';
 
 
 function App() {
@@ -22,10 +27,21 @@ function App() {
 
         <Route path='/add-inventory-item' element={<AddInventoryItem></AddInventoryItem>}></Route>
 
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
-        <Route path='/add-my-item' element={<AddMyItem></AddMyItem>}></Route>
+        <Route path='/manage-my-item' element={
+          <RequireAuth>
+            <ManageMyItems></ManageMyItems>
+          </RequireAuth>
+        }></Route>
 
+        <Route path='/add-my-item' element={
+          <RequireAuth>
+            <AddMyItem></AddMyItem>
+          </RequireAuth>
+        }></Route>
 
+        {/* <Route path='/add-my-item' element={<AddMyItem></AddMyItem>}></Route> */}
 
         {/* <Route path='/add-inventory-item' element={<AddInventoryItem></AddInventoryItem>}></Route> */}
         {/* <Route path='/my-items' element={<MyItems></MyItems>}></Route> */}
@@ -43,9 +59,18 @@ function App() {
           </RequireAuth>
         }></Route>
 
+        <Route path='/inventoryitem/:id' element={
+          <RequireAuth>
+            <ItemDetails></ItemDetails>
+          </RequireAuth>
+        }></Route>
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
+
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

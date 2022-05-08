@@ -31,7 +31,7 @@ const Login = () => {
     if (user) {
         console.log(user, 'user found');
         // navigate('/');
-        // navigate(from, { replace: true });
+        navigate(from, { replace: true });
     }
 
     if (loading) {
@@ -63,7 +63,7 @@ const Login = () => {
         const { data } = await axios.post('http://localhost:5000/login', { email });
         // console.log(data);
         localStorage.setItem('accessToken', data.accessToken);
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
     // Reset Password

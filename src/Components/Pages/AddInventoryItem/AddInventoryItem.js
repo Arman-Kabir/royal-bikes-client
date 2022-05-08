@@ -47,7 +47,7 @@ const AddInventoryItem = () => {
 
     return (
         <div className='w-50 mx-auto'>
-            <h2>Please Add Item</h2>
+            <h2 className='text-center text-info mt-5'>Please Add Inventory Item</h2>
             <form onSubmit={handleAddItemSubmit}>
 
                 {/* <input className='w-100 mb-2' type="email" value={user?.email} name="email" placeholder='email' required readOnly disabled />
