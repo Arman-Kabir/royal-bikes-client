@@ -1,10 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Inventory.css';
 
 const Inventory = ({ bike, handleInventoryItemDelete }) => {
     const { _id, name, image, price, quantity, supplier, description } = bike;
+    const navigate = useNavigate();
 
-    
+    const navigateToBikeDetails = () => {
+        navigate(`/inventory/${_id}`);
+    }
+
+
     return (
         <div className='inventory-item-container'>
 
@@ -23,8 +29,11 @@ const Inventory = ({ bike, handleInventoryItemDelete }) => {
                 <p><span className='fw-bold text-warning'>Quantity:</span> {quantity}</p>
             </div>
 
-            <div className='inventory-item-delete center-all'>
-                <button className='border-0 rounded bg-danger fw-bold text-white p-1' onClick={() => handleInventoryItemDelete(_id)}>Delete</button>
+            <div className='inventory-item-buttons center-all'>
+                <div>
+                    <p><button onClick={() => navigateToBikeDetails(_id)} className='border-0 rounded bg-primary fw-bold text-white p-1' >Update</button> </p>
+                    <button className='border-0 rounded bg-danger fw-bold text-white p-1 pe-2' onClick={() => handleInventoryItemDelete(_id)}>Delete</button>
+                </div>
             </div>
         </div>
     );
