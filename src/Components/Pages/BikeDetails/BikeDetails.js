@@ -8,7 +8,7 @@ const BikeDetails = () => {
     const { _id, name, image, price, quantity, supplier, description } = bike;
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://lit-tundra-62538.herokuapp.com/inventory/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setBike(data))
@@ -21,7 +21,7 @@ const BikeDetails = () => {
         const updatedQuantity = { newQuantity };
 
         // send data to server
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://lit-tundra-62538.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -45,7 +45,7 @@ const BikeDetails = () => {
         // console.log('restock item id', id);
 
         // send data to server
-        const url = `http://localhost:5000/inventory/${id}`;
+        const url = `https://lit-tundra-62538.herokuapp.com/inventory/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

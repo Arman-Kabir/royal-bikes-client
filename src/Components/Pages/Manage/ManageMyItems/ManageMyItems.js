@@ -17,7 +17,7 @@ const ManageMyItems = () => {
     console.log(bikes);
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventoryitem?email=${email}`;
+        const url = `https://lit-tundra-62538.herokuapp.com/inventoryitem?email=${email}`;
         fetch(url,{
             headers:{
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -44,7 +44,7 @@ const ManageMyItems = () => {
 
         if (proceed) {
             console.log('deleting inventory item with id', id);
-            const url = `http://localhost:5000/inventoryitem/${id}`;
+            const url = `https://lit-tundra-62538.herokuapp.com/inventoryitem/${id}`;
             console.log(url);
 
             fetch(url, {

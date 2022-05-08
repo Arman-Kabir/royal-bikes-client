@@ -9,7 +9,7 @@ const ItemDetails = () => {
     console.log(id);
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventoryitem/${id}`;
+        const url = `https://lit-tundra-62538.herokuapp.com/inventoryitem/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setBike(data))
@@ -22,7 +22,7 @@ const ItemDetails = () => {
         const updatedQuantity = { newQuantity };
 
         // send data to server
-        const url = `http://localhost:5000/inventoryitem/${id}`;
+        const url = `https://lit-tundra-62538.herokuapp.com/inventoryitem/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -46,7 +46,7 @@ const ItemDetails = () => {
         // console.log('restock item id', id);
 
         // send data to server
-        const url = `http://localhost:5000/inventoryitem/${id}`;
+        const url = `https://lit-tundra-62538.herokuapp.com/inventoryitem/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

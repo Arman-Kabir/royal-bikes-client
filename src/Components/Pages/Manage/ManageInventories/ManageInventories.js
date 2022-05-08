@@ -23,7 +23,7 @@ const ManageInventory = () => {
 
         if (proceed) {
             console.log('deleting inventory item with id', id);
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://lit-tundra-62538.herokuapp.com/inventory/${id}`;
             console.log(url);
 
             fetch(url, {

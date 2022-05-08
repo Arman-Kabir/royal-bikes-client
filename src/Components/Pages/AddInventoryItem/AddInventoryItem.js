@@ -29,7 +29,7 @@ const AddInventoryItem = () => {
 
 
         // send data to server and then database
-        const url = `http://localhost:5000/inventory`;
+        const url = `https://lit-tundra-62538.herokuapp.com/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {
