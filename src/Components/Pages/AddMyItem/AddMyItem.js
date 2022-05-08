@@ -47,7 +47,7 @@ const AddMyItem = () => {
 
     return (
         <div className='w-50 mx-auto'>
-            <h2>Please Add Item</h2>
+            <h2 className='text-center mt-5 text-info'>Hello,Mr. <span className='text-danger'>{user?.email}</span>...Please Add Your Item</h2>
             <form onSubmit={handleAddItemSubmit}>
 
                 <input className='w-100 mb-2' type="email" value={user?.email} name="email" placeholder='email' required readOnly disabled />
