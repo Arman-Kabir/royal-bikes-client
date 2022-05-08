@@ -18,8 +18,22 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/manage-inventories' element={<ManageInventories></ManageInventories>}></Route>
-        <Route path='/add-inventory-item' element={<AddInventoryItem></AddInventoryItem>}></Route>
-        <Route path='/my-items' element={ <MyItems></MyItems>  }></Route>
+
+        <Route path='/add-inventory-item' element={
+          <RequireAuth>
+            <AddInventoryItem></AddInventoryItem>
+          </RequireAuth>
+        }></Route>
+
+        {/* <Route path='/add-inventory-item' element={<AddInventoryItem></AddInventoryItem>}></Route> */}
+        {/* <Route path='/my-items' element={<MyItems></MyItems>}></Route> */}
+
+        <Route path='/my-items' element={
+          <RequireAuth>
+            <MyItems></MyItems>
+          </RequireAuth>
+        }></Route>
+
 
         <Route path='/inventory/:id' element={
           <RequireAuth>

@@ -28,8 +28,8 @@ const Bike = ({ bike }) => {
             <p className='m-3'>{description}</p>
 
             <div className='buttons'>
-                <p><button onClick={() => updateDetails(_id)}>Update</button> </p>
-                <p><button onClick={() => navigateToBikeDetails(_id)}>Details</button> </p>
+                {/* <p><button onClick={() => updateDetails(_id)}>Update</button> </p> */}
+                <p><button onClick={() => navigateToBikeDetails(_id)} className='border-0 rounded bg-primary fw-bold text-white p-1' >Update</button> </p>
             </div>
         </div>
     );

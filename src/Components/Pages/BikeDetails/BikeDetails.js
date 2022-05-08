@@ -95,7 +95,7 @@ const BikeDetails = () => {
                 </form>
             </div>
             <div className='link-container text-center'>
-                <Link to='/manageinventories' className='text-decoration-none fw-bold fs-4 text-danger'>Manage Inventories</Link>
+                <Link to='/manage-inventories' className='text-decoration-none fw-bold fs-4 text-danger'>Manage Inventories</Link>
 
             </div>
         </div>
