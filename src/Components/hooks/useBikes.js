@@ -5,7 +5,7 @@ const useBikes = (limitItem) => {
     const [bikes, setBikes] = useState([]);
   
     useEffect(() => {
-        const url = `http://localhost:5000/inventory?item=${limitItem}`;
+        const url = `https://lit-tundra-62538.herokuapp.com/inventory?item=${limitItem}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setBikes(data))

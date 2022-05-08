@@ -1,70 +1,37 @@
 # Royal-Bikes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Github Repo: [Client Side](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-Arman-Kabir).
 
-## Available Scripts
+Github Repo: [Server Side](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-Arman-Kabir).
 
-In the project directory, you can run:
+Live Website: [Site](https://royalbikes-76899.web.app/).
 
-### `npm start`
+StackOverflow Question:  [Stack overflow](https://stackoverflow.com/questions/72161151/error-pathspec-add-item-post-api-done-did-not-match-any-files-known-to-git).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Libraries i used
 
-### `npm test`
+* axios
+* bootstrap
+* jsonwebtoken
+* react
+* react-bootstrap
+* react-firebase-hooks
+* react-hook-form
+* react-router-dom
+* react-toastify
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Project short description `
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ This is an inventory management system name royal-bikes. In this inventory, few bikes stored. 
+ People can come and see differnt bike collections.
+ They can select a update button and go to the bike details.Where they can update bike quantity and restock bikes quantity.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ They can add new bikes. pressing the button add new item. But to do this login is required.
+ Otherwise user can't add item.
+ after login then adding new item, user can see his/her selected item. Pressing my Items menu user can see his items.
+ If user is not logged in , then he/she can't see their item.
+ If the user is logged in, then he/she will see more items in the menu bar.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
