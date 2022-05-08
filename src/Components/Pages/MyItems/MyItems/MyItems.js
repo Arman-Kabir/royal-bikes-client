@@ -15,7 +15,7 @@ const MyItems = () => {
         const getMyItems = async () => {
             const email = user?.email;
             if (email) {
-                const url = `http://localhost:5000/inventory?email=${email}`;
+                const url = `http://localhost:5000/inventoryitem?email=${email}`;
                 console.log('url=', url);
                 fetch(url)
                     .then(res => res.json())
@@ -32,7 +32,7 @@ const MyItems = () => {
 
         if (proceed) {
             console.log('deleting inventory item with id', id);
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `http://localhost:5000/inventoryitem/${id}`;
             console.log(url);
 
             fetch(url, {

@@ -6,11 +6,8 @@ import Bike from '../Bike/Bike';
 import './Bikes.css';
 
 const Bikes = () => {
-    const limitItem  = 6; 
-   const [bikes, setBikes] = useBikes(limitItem);
-
-    // const filteredBikes = bikes.filter((bikes, index )=> index < 6);
-    // console.log(filteredBikes);
+    const limitItem = 6;
+    const [bikes, setBikes] = useBikes(limitItem);
 
     return (
         <div className='bikes-collection'>
@@ -19,11 +16,11 @@ const Bikes = () => {
             <div className='bikes-container container'>
                 {
 
-                    bikes.map((bike, index) =>  (bike.length < 6, <Bike key={bike._id} bike={bike}></Bike>))
+                    bikes.map(bike => <Bike key={bike._id} bike={bike}></Bike>)
                 }
             </div>
             <div className='link-container text-center'>
-                <Link to='/manage-inventories'  className='text-decoration-none fw-bold fs-4 text-danger'>Manage Inventories</Link>
+                <Link to='/manage-inventories' className='text-decoration-none fw-bold fs-4 text-danger'>Manage Inventories</Link>
 
             </div>
         </div>

@@ -20,14 +20,13 @@ const Header = () => {
             </div>
             <ul>
                 <li><CustomLink to='/'>Home</CustomLink></li>
-                
-
-
+                <li><CustomLink to='/manage-inventories'>Manage Inventories</CustomLink></li>
+                <li><CustomLink to='/add-inventory-item'>Add Inventory Item</CustomLink></li>
                 {
                     user ?
                         <div className='d-flex'>
-                            <li><CustomLink to='/manage-inventories'>Manage Items</CustomLink></li>
-                            <li><CustomLink to='/add-inventory-item'>Add Items</CustomLink></li>
+                            
+                            <li><CustomLink to='/add-my-item'>Add My Items</CustomLink></li>
                             <li><CustomLink to='/my-items'>My Items</CustomLink></li>
                             <button className='border-0 bg-warning rounded' onClick={logout}>Signout</button>
                         </div>

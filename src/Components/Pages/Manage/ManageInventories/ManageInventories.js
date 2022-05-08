@@ -8,9 +8,13 @@ const ManageInventory = () => {
     const [bikes, setBikes] = useBikes([]);
     const navigate = useNavigate();
 
-    const handleAddNewItem = () => {
+    const handleAddInventoryNewItem = () => {
         console.log('add new item');
         navigate('/add-inventory-item');
+    }
+    const handleAddNewItem = () => {
+        console.log('add new item');
+        navigate('/add-my-item');
     }
 
     const handleInventoryItemDelete = id => {
@@ -44,8 +48,12 @@ const ManageInventory = () => {
     return (
         <div>
             <h2 className='text-center mt-3'>All Royal Bikes: {bikes.length}</h2>
-            <p className='text-center'><button className='border-0 bg-danger text-white rounded fw-bold'
-                onClick={handleAddNewItem}>Add New Item</button></p>
+            <div className='add-item-buttons d-flex justify-content-center'>
+                <p className='text-center me-3'><button className='border-0 bg-danger text-white rounded fw-bold'
+                    onClick={handleAddInventoryNewItem}>Add Inventory New Item</button></p>
+                <p className='text-center'><button className='border-0 bg-danger text-white rounded fw-bold'
+                    onClick={handleAddNewItem}>Add New Item</button></p>
+            </div>
 
             <div className='inventory-container container mt-5'>
                 {
