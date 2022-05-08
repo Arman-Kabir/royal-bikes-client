@@ -6,15 +6,8 @@ import Bike from '../Bike/Bike';
 import './Bikes.css';
 
 const Bikes = () => {
-    // const [bikes, setBikes] = useState([]);
-    // useEffect(() => {
-    //     const url = `http://localhost:5000/inventory`;
-    //     fetch(url)
-    //         .then(res => res.json())
-    //         .then(data => setBikes(data))
-    // }, []);
-
-    const [bikes, setBikes] = useBikes();
+    const limitItem  = 6; 
+   const [bikes, setBikes] = useBikes(limitItem);
 
     // const filteredBikes = bikes.filter((bikes, index )=> index < 6);
     // console.log(filteredBikes);
