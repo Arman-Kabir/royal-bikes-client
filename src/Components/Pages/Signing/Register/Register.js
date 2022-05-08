@@ -5,6 +5,7 @@ import SocialLogin from '../../Signing/SocialLogin/SocialLogin';
 import Loading from '../../../Shared/Loading/Loading';
 import './Register.css';
 import auth from '../../../../firebase.init';
+// import auth from '../../../../firebase.init';
 
 const Register = () => {
     const [email, setEmail] = useState('');
@@ -56,6 +57,7 @@ const Register = () => {
         console.log(email, password);
         await createUserWithEmailAndPassword(email, password);
         await sendEmailVerification();
+        navigate('/login');
     }
 
     return (
