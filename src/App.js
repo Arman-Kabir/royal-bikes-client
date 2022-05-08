@@ -9,6 +9,7 @@ import Register from './Components/Pages/Signing/Register/Register';
 import RequireAuth from './Components/Pages/Signing/RequireAuth/RequireAuth';
 import Header from './Components/Shared/Header/Header';
 import MyItems from './Components/Pages/MyItems/MyItems/MyItems';
+import AddMyItem from './Components/Pages/AddMyItem/AddMyItem';
 
 
 function App() {
@@ -19,11 +20,12 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/manage-inventories' element={<ManageInventories></ManageInventories>}></Route>
 
-        <Route path='/add-inventory-item' element={
-          <RequireAuth>
-            <AddInventoryItem></AddInventoryItem>
-          </RequireAuth>
-        }></Route>
+        <Route path='/add-inventory-item' element={<AddInventoryItem></AddInventoryItem>}></Route>
+
+
+        <Route path='/add-my-item' element={<AddMyItem></AddMyItem>}></Route>
+
+
 
         {/* <Route path='/add-inventory-item' element={<AddInventoryItem></AddInventoryItem>}></Route> */}
         {/* <Route path='/my-items' element={<MyItems></MyItems>}></Route> */}

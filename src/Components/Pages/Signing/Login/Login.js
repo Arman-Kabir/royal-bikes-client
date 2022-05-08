@@ -7,6 +7,7 @@ import SocialLogin from '../../Signing/SocialLogin/SocialLogin';
 import './Login.css';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../../firebase.init';
+import axios from 'axios';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -30,7 +31,7 @@ const Login = () => {
     if (user) {
         console.log(user, 'user found');
         // navigate('/');
-        navigate(from, { replace: true });
+        // navigate(from, { replace: true });
     }
 
     if (loading) {
@@ -57,6 +58,12 @@ const Login = () => {
         event.preventDefault();
         console.log(email, password);
         await signInWithEmailAndPassword(email, password);
+
+        // jwt token works
+        const { data } = await axios.post('http://localhost:5000/login', { email });
+        // console.log(data);
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
 
     // Reset Password
@@ -77,13 +84,13 @@ const Login = () => {
 
                 <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input type="email" name="email" id="" onBlur={handleBlurEmail} required/>
+                    <input type="email" name="email" id="" onBlur={handleBlurEmail} required />
                 </div>
                 <br />
 
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
-                    <input type="password" name="password" id="" onBlur={handleBlurPassword} required/>
+                    <input type="password" name="password" id="" onBlur={handleBlurPassword} required />
                 </div>
                 <br />
 
@@ -109,8 +116,8 @@ const Login = () => {
                 {errorElement}
             </form>
             <SocialLogin></SocialLogin>
-            
-            
+
+
 
         </div>
     );

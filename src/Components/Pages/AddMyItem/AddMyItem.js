@@ -1,16 +1,16 @@
 import React from 'react';
-import './AddInventoryItem.css';
+import './AddMyItem.css';
 import { useForm } from "react-hook-form";
 import auth from '../../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import Loading from '../../Shared/Loading/Loading';
 
-const AddInventoryItem = () => {
-    // const [user, loading] = useAuthState(auth);
+const AddMyItem = () => {
+    const [user, loading] = useAuthState(auth);
 
-    // if (loading) {
-    //     return <Loading></Loading>;
-    // }
+    if (loading) {
+        return <Loading></Loading>;
+    }
 
     // console.log(user);
 
@@ -19,7 +19,7 @@ const AddInventoryItem = () => {
         // console.log(data);
         const itemData = {
             description: event.target.description.value,
-            // email: event.target.email.value,
+            email: event.target.email.value,
             image: event.target.image.value,
             name: event.target.name.value,
             price: event.target.price.value,
@@ -29,7 +29,7 @@ const AddInventoryItem = () => {
 
 
         // send data to server and then database
-        const url = `http://localhost:5000/inventory`;
+        const url = `http://localhost:5000/inventoryitem`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -50,8 +50,8 @@ const AddInventoryItem = () => {
             <h2>Please Add Item</h2>
             <form onSubmit={handleAddItemSubmit}>
 
-                {/* <input className='w-100 mb-2' type="email" value={user?.email} name="email" placeholder='email' required readOnly disabled />
-                <br /> */}
+                <input className='w-100 mb-2' type="email" value={user?.email} name="email" placeholder='email' required readOnly disabled />
+                <br />
                 <input className='w-100 mb-2' type="text" name="name" placeholder='name' required />
                 <br />
                 <input className='w-100 mb-2' type="text" name="image" placeholder='image url' required />
@@ -71,4 +71,4 @@ const AddInventoryItem = () => {
     );
 };
 
-export default AddInventoryItem;
+export default AddMyItem;
