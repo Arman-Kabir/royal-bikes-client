@@ -22,6 +22,7 @@ const Header = () => {
                 <li><CustomLink to='/'>Home</CustomLink></li>
                 <li><CustomLink to='/manage-inventories'>Manage Inventories</CustomLink></li>
                 <li><CustomLink to='/add-inventory-item'>Add Inventory Item</CustomLink></li>
+                <li><CustomLink to='/my-items'>My Items</CustomLink></li>
 
                 {
                     user ? <button className='border-0 bg-warning rounded' onClick={logout}>Signout</button>
