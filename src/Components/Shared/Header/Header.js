@@ -21,6 +21,7 @@ const Header = () => {
             <ul>
                 <li><CustomLink to='/'>Home</CustomLink></li>
                 <li><CustomLink to='/manage-inventories'>Manage Inventories</CustomLink></li>
+                <li><CustomLink to='/blogs'>Blogs</CustomLink></li>
                 {/* <li><CustomLink to='/add-inventory-item'>Add Inventory Item</CustomLink></li> */}
                 {
                     user ?

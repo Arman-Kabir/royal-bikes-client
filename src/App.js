@@ -11,6 +11,7 @@ import Header from './Components/Shared/Header/Header';
 import MyItems from './Components/Pages/MyItems/MyItems/MyItems';
 import AddMyItem from './Components/Pages/AddMyItem/AddMyItem';
 import ManageMyItems from './Components/Pages/Manage/ManageMyItems/ManageMyItems';
+import Blogs from './Components/Pages/Blogs/Blogs';
 
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
         <Route path='/manage-inventories' element={<ManageInventories></ManageInventories>}></Route>
 
         <Route path='/add-inventory-item' element={<AddInventoryItem></AddInventoryItem>}></Route>
+
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
 
         <Route path='/manage-my-item' element={
           <RequireAuth>
